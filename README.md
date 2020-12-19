@@ -23,3 +23,7 @@ Consulter les info du compte en local
 ## M3U-Optimizer
 
 A venir
+
+## M3U-Grabber
+
+Permet de télécharger la liste des chaines disponible depuis iptvcat depuis https://github.com/eliashussary/iptvcat-scraper et de générer une playlist en éléminant les chaine déclarées Offline.
