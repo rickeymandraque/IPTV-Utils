@@ -34,3 +34,7 @@ A venir
 - Leur donner in ID
 - Leur donner une icone
 - Leur donner l'url de l'EPG
+
+## URL_Parser
+
+Analyse et décompose une url.
