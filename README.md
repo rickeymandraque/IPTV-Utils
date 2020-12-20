@@ -1,4 +1,6 @@
 # IPTV-Utils
+- English version: Soon !
+
 collection de script bash (linux) pour fichiers M3U
 
 Comme j'en avait marre de jongler avec les urls pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
