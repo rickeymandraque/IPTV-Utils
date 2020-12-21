@@ -1,6 +1,4 @@
 # IPTV-Utils
-- English version: Soon !
-
 collection de script bash (linux) pour fichiers M3U
 
 Comme j'en avait marre de jongler avec les urls pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
@@ -35,6 +33,13 @@ A venir
 - Leur donner une icone
 - Leur donner l'url de l'EPG
 
-## URL_Parser
+## Account Checker
+- Permet de vérifier et d'obtenir les information d'un compte à partir d'une url http://host.domain:port/user/password(/channel) ou http://host.domain:port/live/user/password(channel)
+- Il affiche :
+- la date de création.
+- la date d'expiration.
+- le statut du compte (activé ou désactivé).
+- le type de compte (enregistré ou trial) si supporté par le seveur.
+- le nombre de connection en cours.
+- le nombre maximum de connexion autorisé.
 
-Analyse et décompose une url.
