@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 # Following regex is based on https://tools.ietf.org/html/rfc3986#appendix-B with
 # additional sub-expressions to split authority into userinfo, host and port
