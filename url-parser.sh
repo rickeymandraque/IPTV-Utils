@@ -67,9 +67,13 @@ else
 	# pour france24
 	if [[ $host == "static.france24.com" ]]; then
 		urltype="france24"
-	# pour rt-france
-	elif [[ $host == "rt-france.secure."* ]]; then
-		urltype="rt-france"
+		f24_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f3)"
+		urlchanless="$(echo "$full_proto$full_hostport/$f24_dir/$Stream_Container")"
+		# pour rt-france
+	elif [[ $host == "rt-france.secure.footprint.net" ]]; then
+		urltype="rt_france"
+		urlchanless="$(echo "$full_proto$full_hostport/")"
 	# pour TV7 et TV3
 	elif [[ $host == *"hdr-tv.com" ]]; then
 		urltype="tv7-3"
@@ -94,13 +98,15 @@ else
 	# Determiner si il y a une catégorie
 	if [[ $urltype == "tf1" ]] || [[ $urltype == "tfx" ]] || [[ $urltype == "tmc" ]]; then
 		streamtype="groupe_tf1"
+		tf1_dir="$(echo "$url" | grep / | cut -d/ -f3)"
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f4)"
+		urlchanless="$(echo "$full_proto$full_hostport/$urltype/$tf1_dir/$Stream_Container")"
 	elif [[ $urltype == "france24" ]]; then
 		streamtype="france24"
 	elif [[ $urltype == "rt-france" ]]; then
 		streamtype="rt-france"
 	elif [[ $urltype == "tv7-3" ]]; then
 		streamtype="tv7-3"
-	# si $urltype est egal à live
 	elif [[ $urltype == "live" ]]; then
 		# alors $streamtype est live
 		streamtype="live"
@@ -115,53 +121,45 @@ else
 		streamtype=""
 	fi
 
-	# extraire le user
+	# extraire le user et le password
 	# si la variable $streamtype est vide
 	if [ -z "$streamtype" ]; then
 		#statements
 		# Alors $user se trouvera en deuxieme position
 		user="$(echo "$url" | grep / | cut -d/ -f2)"
-	elif [[ $streamtype == "groupe_tf1" ]]; then
-		tf1_dir="$(echo "$url" | grep / | cut -d/ -f3)"
-		user=""
-	elif [[ $streamtype == "france24" ]]; then
-		f24_dir="$(echo "$url" | grep / | cut -d/ -f2)"
-		user=""
-	elif [[ $streamtype == "rt-france" ]]; then
-		user=""
-	else
-		# Sinon en troisieme position
-		user="$(echo "$url" | grep / | cut -d/ -f3)"
-	fi
-
-	# Extraire le password
-	# si la variable $streamtype est vide
-	if [ -z "$streamtype" ]; then
 		# Alors $password se trouvera en troisieme position
 		password="$(echo "$url" | grep / | cut -d/ -f3)"
-	elif [[ $streamtype == "groupe_tf1" ]]; then
-		Stream_Container="$(echo "$url" | grep / | cut -d/ -f4)"
-		password=""
-	elif [[ $streamtype == "france24" ]]; then
-		Stream_Container="$(echo "$url" | grep / | cut -d/ -f3)"
-		password=""
-	elif [[ $streamtype == "rt-france" ]]; then
-		password=""
-	else
-		# Sinon en quatrieme position
-		password="$(echo "$url" | grep / | cut -d/ -f4)"
-	fi
+		# Extraire la chaine du lien
+		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		# URL sans la chaine
+		urlchanless="$(echo "$full_proto$full_hostport/$user/$password")"
+		urlplaylist="$proto//$hostport/get.php?username=$user&password=$password&type=m3u"
 
-	# Extraire la chaine du lien
-	if [[ $streamtype == "france24" ]]; then
+	elif [[ $streamtype == "groupe_tf1" ]]; then
+		user=""
+		password=""
+		urlplaylist=""
+
+	elif [[ $streamtype == "france24" ]]; then
+		user=""
+		password=""
 		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
-	elif [[ $streamtype == "rt-france" ]]; then
+		urlplaylist=""
+
+	elif [[ $streamtype == "rt_france" ]]; then
+		user=""
+		password=""
 		channel="$path"
-		# si la variable $streamtype est vide
-	elif [ -z "$streamtype" ]; then
-		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		urlplaylist=""
+
 	else
+		# Sinon user en troisieme position
+		user="$(echo "$url" | grep / | cut -d/ -f3)"
+		# Sinon password en quatrieme position
+		password="$(echo "$url" | grep / | cut -d/ -f4)"
 		channel="$(echo "$url" | grep / | cut -d/ -f5-)"
+		urlchanless="$(echo "$full_proto$full_hostport/$streamtype/$user/$password")"
+		urlplaylist="$proto//$hostport/get.php?username=$user&password=$password&type=m3u"
 	fi
 
 	if [[ $channel == *.* ]]; then
@@ -172,34 +170,6 @@ else
 	if [ -n "$extention" ]; then
 		Channel_noext="$(echo "$channel" | grep "\." | cut -d. -f1)"
 	fi
-
-	# URL sans la chaine
-	if [ -z "$streamtype" ]; then
-		urlchanless="$(echo "$proto$hostport/$user/$password")"
-	elif [[ $streamtype == "groupe_tf1" ]]; then
-		urlchanless="$(echo "$full_proto$full_hostport/$urltype/$tf1_dir/$Stream_Container")"
-	elif [[ $streamtype == "france24" ]]; then
-		urlchanless="$(echo "$full_proto$full_hostport/$f24_dir/$Stream_Container")"
-	elif [[ $streamtype == "rt-france" ]]; then
-		urlchanless="$(echo "$full_proto$full_hostport")"
-	else
-		urlchanless="$(echo "$proto$hostport/$streamtype/$user/$password")"
-	fi
-
-	# if [ -z "$streamtype" ]; then
-	# 	path="$(echo "$user/$password")"
-	# else
-	# 	path="$(echo "$streamtype/$user/$password")"
-	# fi
-
-	# générer l'url pour avoir la playlist
-	if [[ $streamtype == "groupe_tf1" ]] || [[ $streamtype == "france24" ]] || [[ $streamtype == "rt-france" ]]; then
-		urlplaylist=""
-	else
-		urlplaylist="$proto//$hostport/get.php?username=$user&password=$password&type=m3u"
-	fi
-
-	### Fin du Code du parseur d'url ###
 
 	### Fin du Code du parseur d'url ###
 
