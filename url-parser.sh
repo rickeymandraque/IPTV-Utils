@@ -35,6 +35,9 @@ else
 	if [[ $1 == *"?checkedby:iptvcat.com" ]]; then
 		filtre="$(echo "$1" | grep "$\?checkedby:iptvcat.com" | cut -d? -f1)"
 		echo -e "${YELLOW}l'url à été filtrée${NC}"
+	elif [[ $1 == *"&checkedby:iptvcat.com" ]]; then
+		filtre="$(echo "$1" | grep '\&checkedby:iptvcat.com' | cut -d\& -f1)"
+		echo -e "${YELLOW}l'url à été filtrée${NC}"
 	else
 		echo -e "${GREEN}l'url n'a pas été filtrée${NC}"
 		filtre="$1"
@@ -75,8 +78,44 @@ else
 		urltype="rt_france"
 		urlchanless="$(echo "$full_proto$full_hostport/")"
 	# pour TV7 et TV3
-	elif [[ $host == *"hdr-tv.com" ]]; then
-		urltype="tv7-3"
+	elif [[ $host == "tv7.hdr-tv.com" ]]; then
+		urltype="tv7"
+		# pour TV3
+	elif [[ $host == "tv3v.hdr-tv.com" ]]; then
+		urltype="tv3v"
+		# pour LCN
+	elif [[ $host == "live.lachainenormande.fr" ]]; then
+		urltype="lcn"
+		# pour NRJ
+	elif [[ $host == "tv.ngroup.be" ]]; then
+		urltype="nrj"
+		# pour leeeko
+	elif [[ $host == "livetvsteam.com" ]]; then
+		urltype="leeeko"
+		# pour akamaihd.net
+	elif [[ $host == *"akamaihd.net" ]]; then
+		urltype="akamaihd"
+		# pour tvmonaco
+	elif [[ $host == "webtvmonacoinfo.mc" ]]; then
+		urltype="monaco"
+		# pour BipTV
+	elif [[ $host == "biptv.tv" ]]; then
+		urltype="biptv"
+		# pour ONEGOLF
+	elif [[ $host == "162.250.201.58" ]]; then
+		urltype="ONEGOLF"
+		# pour infomaniak.com
+	elif [[ $host == *"infomaniak.com" ]]; then
+		urltype="infomaniak"
+		# pour creacast.com
+	elif [[ $host == *"creacast.com" ]]; then
+		urltype="creacast"
+		# pour cloudycdn
+	elif [[ $host == *"cloudycdn.services" ]]; then
+		urltype="cloudycdn"
+		# pour tvfrancophonie
+	elif [[ $host == *"tvfrancophonie.org" ]]; then
+		urltype="tvfrancophonie"
 	# pour le groupe tf1
 	elif [[ $host == "tf1-hls-live-ssl.tf1.fr" ]]; then
 		urltype="tf1"
@@ -105,10 +144,46 @@ else
 		# si l'url est = à France24
 	elif [[ $urltype == "france24" ]]; then
 		streamtype="france24"
-	elif [[ $urltype == "rt-france" ]]; then
-		streamtype="rt-france"
-	elif [[ $urltype == "tv7-3" ]]; then
+	elif [[ $urltype == "rt_france" ]]; then
+		streamtype="rt_france"
+	elif [[ $urltype == "tv7" ]] || [[ $urltype == "tv3v" ]] || [[ $urltype == "lcn" ]]; then
 		streamtype="tv7-3"
+		tv73_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f4)"
+		urlchanless="$(echo "$full_proto$full_hostport/$tv73_dir/$urltype/$Stream_Container")"
+	elif [[ $urltype == "nrj" ]]; then
+		streamtype="nrj"
+		nrj_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		nrj_chan="$(echo "$url" | grep / | cut -d/ -f3)"
+	elif [[ $urltype == "ANT-REUNION2-HLS" ]]; then
+		streamtype="ANT-REUNION2"
+		# pour leeeko
+	elif [[ $urltype == "leeeko" ]]; then
+		streamtype="leeeko"
+		# pour akamaihd.net
+	elif [[ $urltype == "akamaihd" ]]; then
+		streamtype="akamaihd"
+		# pour tvmonaco
+	elif [[ $urltype == "monaco" ]]; then
+		streamtype="monaco"
+		mona_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f3)"
+	elif [[ $urltype == "biptv" ]]; then
+		streamtype="biptv"
+		bip_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f3)"
+		# pour ONEGOLF
+	elif [[ $urltype == "ONEGOLF" ]]; then
+		streamtype="1golf"
+		golf_audio="$(echo "$url" | grep / | cut -d/ -f4)"
+	elif [[ $urltype == "infomaniak" ]]; then
+		streamtype="infomaniak"
+	elif [[ $urltype == "creacast" ]]; then
+		streamtype="creacast"
+	elif [[ $urltype == "cloudycdn" ]]; then
+		streamtype="cloudycdn"
+	elif [[ $urltype == "tvfrancophonie" ]]; then
+		streamtype="tvfrancophonie"
 		# si l'url contient le mot live
 	elif [[ $urltype == "live" ]]; then
 		# alors $streamtype est live
@@ -127,6 +202,11 @@ else
 	if [[ $streamtype == "no_stream" ]]; then
 		echo -e "${YELLOW}L'url est déja prete pour une requete PHP${NC}"
 	fi
+
+	if [[ $streamtype == "ANT-REUNION2" ]]; then
+		echo -e "${RED}ATTENTION : Le parametre \"${YELLOW}$full_query${RED}\" est obligatoire sur cette chaine${NC}"
+	fi
+
 	# extraire le user et le password
 	# si la variable $streamtype est vide
 	if [ -z "$streamtype" ]; then
@@ -153,11 +233,122 @@ else
 		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
 		urlplaylist=""
 
+	elif [[ $streamtype == "tv7-3" ]]; then
+		user=""
+		password=""
+		channel="$(echo "$url" | grep / | cut -d/ -f5-)"
+		urlplaylist=""
+
 	elif [[ $streamtype == "rt_france" ]]; then
 		user=""
 		password=""
 		channel="$path"
 		urlplaylist=""
+
+	elif [[ $streamtype == "ANT-REUNION2" ]]; then
+		user=""
+		password=""
+		urlchanless="$(echo "$url" | grep / | cut -d/ -f2)"
+		channel="$(echo "$url" | grep / | cut -d/ -f3)"
+		urlplaylist=""
+
+	elif [[ $streamtype == "nrj" ]]; then
+		user=""
+		password=""
+		urlchanless="$(echo "$full_proto$full_hostport/$nrj_dir/$nrj_chan")"
+		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		urlplaylist=""
+
+	elif [[ $streamtype == "leeeko" ]]; then
+		user=""
+		password=""
+		urlchanless="$(echo "$full_proto$full_hostport/leeeko/leeeko/")"
+		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		urlplaylist=""
+
+		# pour akamaihd.net
+	elif [[ $streamtype == "akamaihd" ]]; then
+		Stream_Container="$(echo "$url" | grep / | cut -d/ -f2)"
+		if [[ $Stream_Container == "hls" ]]; then
+			akamaihd_live="$(echo "$url" | grep / | cut -d/ -f3)"
+			akamaihdNB="$(echo "$path" | grep / | cut -d/ -f3)"
+			akamaihd_chan="$(echo "$path" | grep / | cut -d/ -f4)"
+			channel="$(echo "$path" | grep / | cut -d/ -f5-)"
+			urlchanless="$(echo "$full_proto$full_hostport/$Stream_Container/$akamaihd_live/$akamaihdNB/$akamaihd_chan")"
+		else
+			akamaihd_chan="$(echo "$url" | grep / | cut -d/ -f3)"
+			channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+			urlchanless="$(echo "$full_proto$full_hostport/$Stream_Container/$akamaihd_chan")"
+		fi
+		user=""
+		password=""
+		urlplaylist=""
+
+	elif [[ $streamtype == "monaco" ]]; then
+		user=""
+		password=""
+		channel="$(echo "$url" | grep / | cut -d/ -f4)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$mona_dir/$Stream_Container")"
+
+	elif [[ $streamtype == "biptv" ]]; then
+		user=""
+		password=""
+		channel="$(echo "$url" | grep / | cut -d/ -f4)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$bip_dir/$Stream_Container")"
+
+	elif [[ $streamtype == "1golf" ]]; then
+		user=""
+		password=""
+		golf_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		channel="$(echo "$path" | grep / | cut -d/ -f4)"
+		urlchanless="$(echo "$full_proto$full_hostport/$golf_dir/$urltype/$golf_audio")"
+		urlplaylist=""
+
+	elif [[ $streamtype == "infomaniak" ]]; then
+		user=""
+		password=""
+		web_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		web_chan="$(echo "$url" | grep / | cut -d/ -f3)"
+		# Extraire la chaine du lien
+		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$web_dir/$web_chan")"
+
+	elif [[ $streamtype == "creacast" ]]; then
+		user=""
+		password=""
+		# Extraire la chaine du lien
+		channel="$(echo "$url" | grep / | cut -d/ -f4-)"
+		web_chan="$(echo "$url" | grep / | cut -d/ -f3)"
+		web_dir="$(echo "$url" | grep / | cut -d/ -f2)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$web_dir/$web_chan")"
+
+	elif [[ $streamtype == "cloudycdn" ]]; then
+		if [[ $streamtype == "cloudycdn" && $(echo "$path" | grep / | cut -d/ -f4-) != "media.m3u8" ]]; then
+			echo -e "${RED}ATTENTION : Le parametre \"${YELLOW}$(echo "$path" | grep / | cut -d/ -f4-)${RED}\" sera remplacé par ${YELLOW}media.m3u8${NC}"
+			channel="media.m3u8"
+		else
+			channel="$(echo "$path" | grep / | cut -d/ -f4-)"
+		fi
+		user=""
+		password=""
+		web_chan="$(echo "$url" | grep / | cut -d/ -f4)"
+		web_type="$(echo "$url" | grep / | cut -d/ -f2)"
+		web_dir="$(echo "$url" | grep / | cut -d/ -f3)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$web_type/$web_dir/$web_chan")"
+
+	elif [[ $streamtype == "tvfrancophonie" ]]; then
+		user=""
+		password=""
+		web_type="$(echo "$url" | grep / | cut -d/ -f2)"
+		web_dir="$(echo "$url" | grep / | cut -d/ -f3)"
+		channel="$(echo "$url" | grep / | cut -d/ -f4)"
+		urlplaylist=""
+		urlchanless="$(echo "$full_proto$full_hostport/$web_type/$web_dir")"
 
 	elif [[ $streamtype == "no_stream" ]]; then
 		user="$(echo "$query" | grep \= | cut -d\= -f2- | cut -d\& -f1)"
@@ -199,6 +390,7 @@ else
 	echo "  user: $user"
 	echo "  password : $password"
 	echo "  Dossier TF1 : $tf1_dir"
+	echo "  Dossier Tv73 : $tv73_dir"
 	echo "  Dossier France24 : $f24_dir"
 	echo "  Conteneur : $Stream_Container"
 	echo "  hostport: $hostport"
@@ -210,4 +402,5 @@ else
 	echo "  channel sans ext: $Channel_noext"
 	echo "  url sans chaine: $urlchanless"
 	echo "  url playlist : $urlplaylist"
+	echo "  requete : $query"
 fi
