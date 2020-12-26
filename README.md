@@ -1,9 +1,9 @@
 # IPTV-Utils
 ## collection de script bash (linux) pour fichiers M3U.
-Comme j'en avait marre de jongler avec les urls pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
+Comme j'en avais marre de jongler avec les URL pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
 
 #### Logiciels requis:
-requiere wget, curl, ffmpeg, ffprobe et jq
+requière wget, curl, ffmpeg, ffprobe et jq
 
 ## Get-Playlist
 Script pour obtenir la playlist à partir d'une url type http://host.domain:port/user/password/channel ou http://host.domain:port/live|movie/user/password/channel
