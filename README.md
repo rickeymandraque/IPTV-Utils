@@ -1,6 +1,5 @@
 # IPTV-Utils
-collection de script bash (linux) pour fichiers M3U
-
+## collection de script bash (linux) pour fichiers M3U.
 Comme j'en avait marre de jongler avec les urls pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
 
 #### Logiciels requis:
@@ -47,4 +46,10 @@ A venir
 
 ## URL_Parser
 
-- Analyse et décompose une url.
+- Analyse, néttoie et décompose une url.
+- Détecte les urls des chaines, des requetes Xtream et les adresse des chaîne Xtream.
+### Utilisation:
+
+url_parser.sh "http://mon/url"
+
+! ATTENTION ! Veuillez mettre votre url en guillemets (double quote)
