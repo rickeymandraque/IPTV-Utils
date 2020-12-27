@@ -3,7 +3,7 @@
 Comme j'en avais marre de jongler avec les URL pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
 
 #### Logiciels requis:
-requière wget, curl, ffmpeg, ffprobe et jq
+requière wget, gawk, curl, ffmpeg, ffprobe et jq
 
 ## Get-Playlist
 Script pour obtenir la playlist à partir d'une url type http://host.domain:port/user/password/channel ou http://host.domain:port/live|movie/user/password/channel
