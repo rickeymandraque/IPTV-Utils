@@ -1,0 +1,254 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="TF1.fr" tvg-name="TF1" tvg-logo="https://static.epg.best/fr/TF1.fr.png" group-title="France",TF1
+https://tf1-hls-live-ssl.tf1.fr/tf1/1/hls/master_3000000.m3u8
+
+#EXTINF:-1 tvg-id="France2.fr" tvg-name="France 2" tvg-logo="https://static.epg.best/fr/France2.fr.png" group-title="France",France 2
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/france2live-12471/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="France3.fr" tvg-name="France 3" tvg-logo="https://static.epg.best/fr/France3.fr.png" group-title="France",France 3
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/france3live-12472/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="CanalPlus.fr" tvg-name="Canal Plus (En clair)" tvg-logo="https://static.epg.best/fr/CanalPlus.fr.png" group-title="France",Canal+ en clair
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/tech_canalplus_ott_mobile-655617/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="France4.fr" tvg-name="France 4" tvg-logo="https://static.epg.best/fr/France4.fr.png" group-title="France",France 4
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/france4live-43225/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="France5.fr" tvg-name="France 5" tvg-logo="https://static.epg.best/fr/France5.fr.png" group-title="France",France 5
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/france5live-12474/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="ARTE.fr" tvg-name="Arte" tvg-logo="https://static.epg.best/fr/ARTE.fr.png" group-title="France",Arte
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/artelive-18512/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="M6.fr" tvg-name="M6" tvg-logo="https://static.epg.best/fr/M6.fr.png" group-title="France",M6
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/m6-23835/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="C8.fr" tvg-name="C8" tvg-logo="https://static.epg.best/fr/C8.fr.png" group-title="France",C8
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/direct8live-76289/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="W9.fr" tvg-name="W9" tvg-logo="https://static.epg.best/fr/W9.fr.png" group-title="France",W9
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/w9live-37153/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="6ter.fr" tvg-name="6ter" tvg-logo="https://static.epg.best/fr/6ter.fr.png" group-title="France",6TER
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/6ter-850445/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="ES1.fr" tvg-name="ES1" tvg-logo="https://www.es1.tv/_common/img/es-logo.png" group-title="Sport",ES1
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/es1-14552304/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="CStar.fr" tvg-name="CStar" tvg-logo="https://static.epg.best/fr/CStar.fr.png" group-title="France",CSTAR
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/d17-451622/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="CNews.fr" tvg-name="CNEWS" tvg-logo="https://static.epg.best/fr/CNews.fr.png" group-title="France News",CNEWS 
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/itelevisionlive-12477/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="TF1SeriesFilms.fr" tvg-name="TF1 Séries Films" tvg-logo="https://static.epg.best/fr/TF1SeriesFilms.fr.png" group-title="France",TF1 Séries Films
+https://tsf-hls-live-ssl.tf1.fr/tsf/1/hls/live_2328.m3u8
+
+#EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-logo="https://static.epg.best/fr/TMC.fr.png" group-title="France",TMC
+https://tmc-hls-live-ssl.tf1.fr/tmc/1/hls/live_496.m3u8
+
+#EXTINF:-1 tvg-id="TFX.fr" tvg-name="TFX" tvg-logo="https://static.epg.best/fr/TFX.fr.png" group-title="France",TFX
+https://tfx-hls-live-ssl.tf1.fr/tfx/1/hls/live_2328.m3u8
+
+#EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="L'Equipe 21" tvg-logo="https://static.epg.best/fr/LEquipe21.fr.png" group-title="Sport",L'Equipe 21
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/equipe21-850463/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="RMCdecouverte.fr" tvg-name="RMC Découverte" tvg-logo="https://static.epg.best/fr/RMCdecouverte.fr.png" group-title="France",RMC Decouverte
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/rmcdecouverte-850466/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="RMCStory.fr" tvg-name="RMC Story" tvg-logo="https://static.epg.best/fr/RMCStory.fr.png" group-title="France",RMC Story
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/numero23-850465/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="NRJHits.fr" tvg-name="NRJ Hits" tvg-logo="https://static.epg.best/fr/NRJHits.fr.png" group-title="France Musique",NRJ Hits
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Nrjhits_live/index.m3u8
+
+#EXTINF:-1 tvg-id="NRJ12.fr" tvg-name="NRJ 12" tvg-logo="https://static.epg.best/fr/NRJ12.fr.png" group-title="France",NRJ 12
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/nrj12-43229/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Parlementaire.fr" tvg-name="Public Sénat" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/4/4b/Logo_Public_S%C3%A9nat_%282019%29.svg" group-title="France News",Public Senat 
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/publicsenat2424-14495872/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="UshuaiaTV.fr" tvg-name="Ushuaia TV" tvg-logo="https://static.epg.best/fr/UshuaiaTV.fr.png" group-title="France",Ushuaia tv
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Ushuaia_live/index.m3u8
+
+#EXTINF:-1 tvg-id="ParisPremiere.fr" tvg-name="Paris Première" tvg-logo="https://static.epg.best/fr/ParisPremiere.fr.png" group-title="France",Paris Premiere
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/Parispremiere_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Cherie25.fr" tvg-name="Chérie 25" tvg-logo="https://static.epg.best/fr/Cherie25.fr.png" group-title="France",Cherie 25
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/cherie25-850448/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="D5 TV" tvg-logo="https://d5tv.fr/wp-content/uploads/2020/07/d5tv_carre.png" group-title="France",D5 TV
+http://live.creacast.com/d5tv/smil:d5tv.smil/chunklist_w694080661_b1928000.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="My Comedy" tvg-logo="https://mycomedy.fr/wp-content/uploads/2020/07/MyComedy-Logo-HD-okayNOIR.png" group-title="France",MYCOMEDY
+http://live.creacast.com/mycomedy/smil:mycomedy.smil/chunklist_w1113167704_b1928000.m3u8
+
+#EXTINF:-1 tvg-id="ComedyCentral.fr" tvg-name="Comedy Central" tvg-logo="https://static.epg.best/fr/ComedyCentral.fr.png" group-title="France",COMEDY CENTRAL
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/tech_comedycentral_ott_mobile-14552503/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="BET.fr" tvg-name="BET" tvg-logo="https://static.epg.best/fr/BET.fr.png" group-title="France",BET
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/bet-14514649/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="RTFrance.fr" tvg-name="RT France" tvg-logo="https://static.epg.best/fr/RTFrance.fr.png" group-title="France News",RT France
+http://rt-france.secure.footprint.net/1107.m3u8
+
+#EXTINF:-1 tvg-id="TV5MondeEurope.fr" tvg-name="TV5 Monde" tvg-logo="https://static.epg.best/fr/TV5MondeAsia.fr.png" group-title="France News",TV5 Monde
+http://v3plusinfo247hls-i.akamaihd.net/hls/live/218877/v3plusinfo247hls/v3plusinfo247hls_1_6.m3u8
+
+#EXTINF:-1 tvg-id="France24.fr" tvg-name="France 24" tvg-logo="https://static.epg.best/fr/France24.fr.png" group-title="France News",France 24
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/France24_fr_live/index.m3u8
+
+#EXTINF:-1 tvg-id="FashionTV.fr" tvg-name="Fashion TV" tvg-logo="https://static.epg.best/fr/FashionTV.fr.png" group-title="France",Fashion TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/fashiontv-14423623/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Ginx.fr" tvg-name="Ginx" tvg-logo="https://static.epg.best/fr/Ginx.fr.png" group-title="France",GINX E SPORTS TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/ginx-14366332/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="LCI.fr" tvg-name="LCI" tvg-logo="https://static.epg.best/fr/LCI.fr.png" group-title="France News",LCI
+https://lci-hls-live-ssl.tf1.fr/lci/1/hls/live_2328.m3u8
+
+#EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-logo="https://www.francetvinfo.fr/skin/www/img/lgo/logo.svg" group-title="France News",France Info
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/franceinfo-14390660/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="Sport en France" tvg-logo="https://www.sportenfrance.com/wp-content/uploads/2019/05/SEF.png" group-title="Sport",Sport en France 
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/tech_sportsenfrance_ott_mobile-14552637/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="I24News.fr" tvg-name="I24 News FR" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fb/I24_official_logo.png" group-title="France News",i24 FR 
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/i24news-14366340/hls/03.m3u8
+
+#EXTINF:-1 tvg-id="LaChaineParlementaire.fr" tvg-name="LCP 100%" tvg-logo="https://media.ouest-france.fr/v1/pictures/e86e76a461415a95956634d215f73094-992.png" group-title="France News",LCP 100%
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/lcp100pourcent-14495875/hls/index.m3u8
+
+
+#EXTINF:-1 tvg-id="LaChaineParlementaire.fr" tvg-name="LCP" tvg-logo="https://www.lcp.fr/sites/lcp.fr/themes/eclydre_zen/img/logo-presse.png" group-title="France News",LCP TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/lcplive-22828/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Euronews.fr" tvg-name="Euronews" tvg-logo="https://static.epg.best/fr/Euronews.fr.png" group-title="France News",euronews 
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/Euronews_live/index.m3u8
+
+#EXTINF:-1 tvg-id="BFMBusiness.fr"  tvg-name="BFM Business" tvg-logo="https://static.epg.best/fr/BFMBusiness.fr.png" group-title="France News",BFM Business
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/bfmbusiness-655624/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="BFMParis.fr" tvg-name="BFM Paris" tvg-logo="https://static.epg.best/fr/BFMParis.fr.png" group-title="France News",BFM PARIS
+https://bfmparishdslive-lh.akamaihd.net/i/BFMPARIS_KB@429747/master.m3u8
+
+#EXTINF:-1 tvg-id="BFMLyon.fr" tvg-name="BFM Lyon" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a7/BFMLyon2019.jpg" group-title="France News",BFM Lyon
+https://bfmlyon-lh.akamaihd.net/i/BFMLYON_KBS@797041/master.m3u8
+
+#EXTINF:-1 tvg-id="BFMGrandLittoral.fr" tvg-name="BFM Grand Littoral" tvg-logo="https://www.groupesecom.fr/wp-content/uploads/2020/02/Logo-BFM-Littoral.png" group-title="France News",BFM Grand Littoral
+https://live.creacast.com/grandlittoral/smil:grandlittoral.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="LN24.be" tvg-name="LN24" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/41/LN24_-_Logo.png" group-title="Belgique News",LN 24
+https://live.cdn.ln24.be/out/v1/b191621c8b9a436cad37bb36a82d2e1c/index.m3u8
+
+#EXTINF:-1 tvg-id="antennereunion.fr" tvg-name="Antenne Réunion" tvg-logo="https://pbs.twimg.com/profile_images/526996215926255617/Yl9fnDZR.png" group-title="France",Antenne Reunion
+http://41.213.128.196/ANT-REUNION2-HLS/ANT-REUNION2-HLS.m3u8?localization=ZEOP01
+
+#EXTINF:-1 tvg-id="" tvg-name="MEN’S UP TV" tvg-logo="http://static.mensup.fr/images/logo-blanc.png" group-title="France",MENS UP TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/men_s_up_live/index.m3u8
+
+#EXTINF:-1 tvg-id="RFMTV.fr" tvg-name="RFM TV" tvg-logo="https://i.imgur.com/V3wENl0.png" group-title="France",RFM TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Mcm_pop_live/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TV78" tvg-logo="https://www.tv78.com/wp-content/uploads/2019/04/ico_googleplay.png" group-title="France",TV78
+https://streamtv.cdn.dvmr.fr/TV78/ngrp:tv78.stream_all/master.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="Alpe D'Huez TV" tvg-logo="https://pbs.twimg.com/profile_images/784087632540303362/B1psYgYz.jpg" group-title="France",ALPE DUEZ
+https://edge10.vedge.infomaniak.com/livecast/ik:adhtv/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="Alsace20.fr" tvg-name="Alsace 20" tvg-logo="https://static.epg.best/fr/Alsace20.fr.png" group-title="France",ALSACE 20
+http://live.alsace20.fr/live/alsace20/ngrp:alsace20_all/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Mezzo.fr" tvg-name="Mezzo" tvg-logo="https://static.epg.best/fr/Mezzo.fr.png" group-title="France Musique",Mezzo
+http://ott-cdn.ucom.am/s35/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="La Chaine Normande" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Cha%C3%AEne_Normande.png" group-title="France",La Chaine Normande
+http://live.lachainenormande.fr/live/lcn/livestream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="BipTV" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/b/b1/Bip_TV_logo.png" group-title="France",BipTV
+https://biptv.tv/live/biptvstream_orig/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="Francophonie24" tvg-logo="https://www.coolstreaming.us/img/ch/image98668660084.jpg" group-title="France",Francophonie
+http://mv2.tvfrancophonie.org/live/Stream1/media_b776739_w671289549.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TZiK" tvg-logo="https://images.squarespace-cdn.com/content/5d912c8fc92ec9603f7bc3a1/1596601891411-FXH9KZA62RTJBXMYXAOB/green_blue_gradient_logo_transparent_background.png?format=1000w&content-type=image%2Fpng" group-title="France Musique",TZiK
+https://54627d4fc5996.streamlock.net/tzik/tzik/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="TVM3.ch" tvg-name="TVM3" tvg-logo="https://static.epg.best/ch/TVM3.ch.png" group-title="Suisse",TVM 3
+https://edge5.vedge.infomaniak.com/livecast/tvm3/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="AEROSTAR.TV" tvg-logo="https://www.tv-direct.fr/assets/logo/chaines/aerostar-tv.jpg" group-title="France",AEROSTAR.TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/aerostar-14365561/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="AB1.fr" tvg-name="AB 1" tvg-logo="https://static.epg.best/fr/AB1.fr.png" group-title="France",AB1
+http:///cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/AB1_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Histoire.fr" tvg-name="Histoire" tvg-logo="https://static.epg.best/fr/Histoire.fr.png" group-title="France",Histoire TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Histoire_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Animaux.fr" tvg-name="Animaux" tvg-logo="https://static.epg.best/fr/Animaux.fr.png" group-title="France",Animaux
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Animaux_live/index.m3u8
+
+#EXTINF:-1 tvg-id="ChassePeche.fr" tvg-name="Chasse et pêche" tvg-logo="https://static.epg.best/fr/ChassePeche.fr.png" group-title="France",Chasse&Pêche
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/live/Chasseetpeche_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Golf.fr" tvg-name="Golf" tvg-logo="https://static.epg.best/fr/Golf.fr.png" group-title="Sport",GOLF
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/GolfChannel_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Equidia.fr" tvg-name="Equidia" tvg-logo="https://static.epg.best/fr/Equidia.fr.png" group-title="Sport",Equidia
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/equidia-43222/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="KTO.fr" tvg-name="KTO" tvg-logo="https://static.epg.best/fr/KTO.fr.png" group-title="Religions",KTO
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/kto-14366337/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="LuckyJack.lu" tvg-name="Lucky Jack" tvg-logo="https://static.epg.best/lu/LuckyJack.lu.png" group-title="Luxembourg",LuckyJack.tv
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/LuckyJack_live/index.m3u8
+
+#EXTINF:-1 tvg-id="LuxeTV.eu" tvg-name="Luxe.TV" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/d/d1/Luxe_TV_Logo.svg/650px-Luxe_TV_Logo.svg.png" group-title="France",LUXE.TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/luxetv-14366338/hls/index.m3u8
+
+#EXTINF:-1 tvg-name="TV Pitchoun" tvg-logo="https://tvradio-pitchoun.fr/assets/img/logo_tv_radio.svg" group-title="France Musique",tv-pitchoun
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/pitchountv-14552378/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Gulli.fr" tvg-name="Gulli" tvg-logo="https://static.epg.best/fr/Gulli.fr.png" group-title="France",Gulli
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/gulli-76287/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Boing.fr" tvg-name="Boing" tvg-logo="https://static.epg.best/fr/Boing.fr.png" group-title="France",Boing
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/Boing_live/index.m3u8
+
+#EXTINF:-1 tvg-id="GameOne.fr" tvg-name="Game One" tvg-logo="https://static.epg.best/fr/GameOne.fr.png" group-title="France",Game One
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/GameOne_live/index.m3u8
+
+#EXTINF:-1 tvg-id="GameOne.fr" tvg-name="Game One +1" tvg-logo="https://cdn.woopic.com/v1/AUTH_9ffb653181284b0abe5e45d7014095b2/boutique-tv/game_one_2_1440@1x_5f3d5a417397cc7df561dbdc.png" group-title="France",Game One Plus
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/gameoneplus1-14552220/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="Boomerang.fr" tvg-name="Boomerang" tvg-logo="https://static.epg.best/fr/Boomerang.fr.png" group-title="France",Boomerang
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/Boomerang_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Mangas.fr" tvg-name="Mangas" tvg-logo="https://static.epg.best/fr/Mangas.fr.png" group-title="France",Mangas
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/Mangas_live/index.m3u8
+
+#EXTINF:-1 tvg-id="MCM.fr" tvg-name="MCM" tvg-logo="https://static.epg.best/fr/MCM.fr.png" group-title="France Musique",MCM
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/mcm_live/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="Clubbing TV" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/3/39/Clubbing_TV.png" group-title="France Musique",Clubbing TV
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/ClubbingTV_live/index.m3u8
+
+#EXTINF:-1 tvg-id="ScienceAndVie.fr" tvg-name="Science & Vie TV" tvg-logo="https://static.epg.best/fr/ScienceAndVie.fr.png" group-title="France",Science et Vie
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Encyclopedia_live/index.m3u8
+
+#EXTINF:-1 tvg-id="TouteHistoire.fr" tvg-name="Toute l'histoire" tvg-logo="https://static.epg.best/fr/TouteHistoire.fr.png" group-title="France",Toute histoire
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/live/Toute_l_Histoire_live/index.m3u8
+
+#EXTINF:-1 tvg-id="Teva.fr" tvg-name="Téva" tvg-logo="https://static.epg.best/fr/Teva.fr.png" group-title="France",Teva
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/teva-37149/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="TvBreizh.fr" tvg-name="Tv Breizh" tvg-logo="https://static.epg.best/fr/TvBreizh.fr.png" group-title="France",TV Breizh
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/tvbreizh-27323/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="RTL9.fr" tvg-name="RTL 9"  tvg-logo="https://static.epg.best/lu/RTL9.lu.png" group-title="France",RTL 9
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/live/Rtl9_live/index.m3u8
+
+#EXTINF:-1 tvg-id="CGTNFrench.cn" tvg-name="CGTN France" tvg-logo="https://static.epg.best/cn/CGTNFrench.cn.png" group-title="France News",CGTN Français
+https://livefr.cgtn.com/1000f/prog_index.m3u8
