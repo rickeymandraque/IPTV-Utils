@@ -113,7 +113,7 @@ https://radio.congoplanet.com/Congo_Planet_TV_Pop.sdp/Congo_Planet_TV_Pop/playli
 https://live.creacast.com/d5tv/smil:d5tv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="DBM" tvg-language="Français" tvg-logo="https://www.dbm-tv.fr/wp-content/uploads/2017/12/logo-dbm.png" tvg-country="FR" group-title="Music" ,DBM
 https://dbmtv.vedge.infomaniak.com/livecast/smil:dbmtv.smil/manifest.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="EMCI TV" tvg-language="Français" tvg-logo="https://i.imgur.com/HRqcIcR.png" tvg-country="CA" group-title="Canada" ,EMCI TV
+#EXTINF:-1 tvg-id="" tvg-name="EMCI TV" tvg-language="Français" tvg-logo="https://i.imgur.com/HRqcIcR.png" tvg-country="CA" group-title="Religions" ,EMCI TV
 https://emci-fr-hls.akamaized.net/hls/live/2007265/emcifrhls/index.m3u8
 #EXTINF:-1 tvg-id="Equidia.fr" tvg-name="Equidia" tvg-language="Français" tvg-logo="https://static.epg.best/fr/Equidia.fr.png" tvg-country="FR" group-title="Sport" ,Equidia
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/equidia-43222/hls/index.m3u8
@@ -243,7 +243,7 @@ https://rtltvi-lh.akamaihd.net/i/TVI_1@319659/master.m3u8
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/Encyclopedia_live/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Sport en France" tvg-language="Français" tvg-logo="https://www.sportenfrance.com/wp-content/uploads/2019/05/SEF.png" tvg-country="FR" group-title="Sport" ,Sport en France
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/tech_sportsenfrance_ott_mobile-14552637/hls/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="Télé Culturelle Médias" tvg-language="Français" tvg-logo="https://i.imgur.com/oRigj9q.jpg" tvg-country="CA" group-title="Canada" ,Télé Culturelle Médias
+#EXTINF:-1 tvg-id="" tvg-name="Télé Culturelle Médias" tvg-language="Français" tvg-logo="https://i.imgur.com/oRigj9q.jpg" tvg-country="CA" group-title="Religions" ,Télé Culturelle Médias
 https://5790d294af2dc.streamlock.net/8150/8150/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Tele Louange" tvg-language="Français" tvg-logo="https://i.imgur.com/vZmlq9N.jpg" tvg-country="BF" group-title="Haïti" ,Tele Louange
 https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8
