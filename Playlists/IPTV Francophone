@@ -37,7 +37,7 @@ http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/d17-451622/hls/index.m3u8
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/gulli-76287/hls/index.m3u8
 #EXTINF:-1 tvg-id="TF1SeriesFilms.fr" tvg-name="TF1 Séries Films" tvg-language="Français" tvg-logo="https://static.epg.best/fr/TF1SeriesFilms.fr.png" tvg-country="FR" group-title="France" ,TF1 Séries Films
 https://tsf-hls-live-ssl.tf1.fr/tsf/1/hls/live_2328.m3u8
-#EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="L'Equipe 21" tvg-language="Français" tvg-logo="https://static.epg.best/fr/LEquipe21.fr.png" tvg-country="FR" group-title="Sport" ,L'Equipe 21
+#EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="La chaîne l'Equipe" tvg-language="Français" tvg-logo="https://static.epg.best/fr/LEquipe21.fr.png" tvg-country="FR" group-title="Sport" ,L'Equipe 21
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/equipe21-850463/hls/index.m3u8
 #EXTINF:-1 tvg-id="6ter.fr" tvg-name="6ter" tvg-language="Français" tvg-logo="https://static.epg.best/fr/6ter.fr.png" tvg-country="FR" group-title="France" ,6TER
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/6ter-850445/hls/index.m3u8
@@ -51,6 +51,8 @@ http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/cherie25-850448/hls/index.m3u8
 https://lci-hls-live-ssl.tf1.fr/lci/1/hls/live_2328.m3u8
 #EXTINF:-1 tvg-id="ParisPremiere.fr" tvg-name="Paris Première" tvg-language="Français" tvg-logo="https://static.epg.best/fr/ParisPremiere.fr.png" tvg-country="FR" group-title="France" ,Paris Premiere
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/Parispremiere_live/index.m3u8
+#EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-language="Français" tvg-logo="https://www.francetvinfo.fr/skin/www/img/lgo/logo.svg" tvg-country="FR" group-title="France News" ,France Info
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/franceinfo-14390660/hls/index.m3u8
 #EXTINF:-1 tvg-id="3ABN.us" tvg-name="3ABN" tvg-language="Français" tvg-language="Français" tvg-logo="https://static.epg.best/us/3ABN.us.png" tvg-country="US" group-title="Religious" ,3ABN Français
 https://moiptvhls-i.akamaihd.net/hls/live/652314/secure/HQs/chunklist.m3u8
 #EXTINF:-1 tvg-id="AB1.fr" tvg-name="AB 1" tvg-language="Français" tvg-logo="https://static.epg.best/fr/AB1.fr.png" tvg-country="FR" group-title="France" ,AB1
@@ -145,8 +147,6 @@ http://fash1043.cloudycdn.services/slive/_definst_/ftv_pg16_adaptive.smil/media.
 https://fash1043.cloudycdn.services/slive/ftv_pg16_adaptive.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="France24.fr" tvg-name="France 24" tvg-language="Français" tvg-logo="https://static.epg.best/fr/France24.fr.png" tvg-country="FR" group-title="France News" ,France 24
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/France24_fr_live/index.m3u8
-#EXTINF:-1 tvg-id="FranceInfo.fr" tvg-name="France Info" tvg-language="Français" tvg-logo="https://www.francetvinfo.fr/skin/www/img/lgo/logo.svg" tvg-country="FR" group-title="France News" ,France Info
-http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/franceinfo-14390660/hls/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Francophonie" tvg-language="Français" tvg-logo="https://www.coolstreaming.us/img/ch/image98668660084.jpg" tvg-country="FR" group-title="France" ,Francophonie
 http://mv2.tvfrancophonie.org/live/Stream1/media_b776739_w671289549.m3u8
 #EXTINF:-1 tvg-id="GameOne.fr" tvg-name="Game One" tvg-language="Français" tvg-logo="https://static.epg.best/fr/GameOne.fr.png" tvg-country="FR" group-title="France" ,Game One
@@ -195,6 +195,10 @@ http://tv.mondeduloisir.fr:1935/tixtv/smil:web.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Medi1TV.ma" tvg-name="Medi 1 TV" tvg-language="Français" tvg-logo="https://static.epg.best/ma/Medi1TV.ma.png" tvg-country="MA" group-title="Afrique" ,Medi 1 TV
 #EXTINF:-1 tvg-id="" tvg-name="MEN’S UP TV" tvg-language="Français" tvg-logo="http://static.mensup.fr/images/logo-blanc.png" tvg-country="FR" group-title="France" ,MENS UP TV
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/men_s_up_live/index.m3u8
+#EXTINF:-1 tvg-id="Mezzo.fr" tvg-name="Mezzo (Orange)" tvg-language="Français" tvg-logo="https://static.epg.best/fr/Mezzo.fr.png" tvg-country="FR" group-title="France Musique" ,Mezzo
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/mezzo_live/index.m3u8
+#EXTINF:-1 tvg-id="Mezzo.fr" tvg-name="Mezzo Live HD" tvg-language="Français" tvg-logo="https://static.epg.best/fr/Mezzo.fr.png" tvg-country="FR" group-title="France Musique" ,Mezzo
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO2/hls/live/mezzolivehd_live/index.m3u8
 #EXTINF:-1 tvg-id="Mezzo.fr" tvg-name="Mezzo" tvg-language="Français" tvg-logo="https://static.epg.best/fr/Mezzo.fr.png" tvg-country="FR" group-title="France Musique" ,Mezzo
 http://ott-cdn.ucom.am/s35/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="My Comedy" tvg-language="Français" tvg-logo="https://mycomedy.fr/wp-content/uploads/2020/07/MyComedy-Logo-HD-okayNOIR.png" tvg-country="FR" group-title="France" ,MYCOMEDY
