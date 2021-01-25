@@ -18,7 +18,7 @@ http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/direct8live-76289/hls/index.m3u8
 #EXTINF:-1 tvg-id="W9.fr" tvg-name="W9" tvg-language="Français" tvg-logo="https://static.epg.best/fr/W9.fr.png" tvg-country="FR" group-title="France" ,W9
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/w9live-37153/hls/index.m3u8
 #EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-language="Français" tvg-logo="https://static.epg.best/fr/TMC.fr.png" tvg-country="FR" group-title="France" ,TMC
-https://tmc-hls-live-ssl.tf1.fr/tmc/1/hls/live.m3u8
+https://tmc-hls-live-ssl.tf1.fr/tmc/1/hls/live_2328.m3u8
 #EXTINF:-1 tvg-id="TFX.fr" tvg-name="TFX" tvg-language="Français" tvg-logo="https://static.epg.best/fr/TFX.fr.png" tvg-country="FR" group-title="France" ,TFX
 https://tfx-hls-live-ssl.tf1.fr/tfx/1/hls/live_2328.m3u8
 #EXTINF:-1 tvg-id="NRJ12.fr" tvg-name="NRJ 12" tvg-language="Français" tvg-logo="https://static.epg.best/fr/NRJ12.fr.png" tvg-country="FR" group-title="France" ,NRJ 12
