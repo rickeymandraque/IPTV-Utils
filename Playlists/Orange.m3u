@@ -30,7 +30,7 @@ http://cdn.webtv4.cdnfr.orange.fr/hs/HALO3/hls/itelevisionlive-12477/hls/index.m
 #EXTINF:-1 tvg-id="TF1SeriesFilms.fr" tvg-name="TF1 Séries Films" tvg-logo="https://static.epg.best/fr/TF1SeriesFilms.fr.png" group-title="France",TF1 Séries Films
 https://tsf-hls-live-ssl.tf1.fr/tsf/1/hls/live.m3u8
 #EXTINF:-1 tvg-id="TMC.fr" tvg-name="TMC" tvg-logo="https://static.epg.best/fr/TMC.fr.png" group-title="France",TMC
-https://tmc-hls-live-ssl.tf1.fr/tmc/1/hls/live.m3u8
+https://tmc-hls-live-ssl.tf1.fr/tmc/1/hls/live_2328.m3u8
 #EXTINF:-1 tvg-id="TFX.fr" tvg-name="TFX" tvg-logo="https://static.epg.best/fr/TFX.fr.png" group-title="France",TFX
 https://tfx-hls-live-ssl.tf1.fr/tfx/1/hls/live.m3u8
 #EXTINF:-1 tvg-id="LEquipe21.fr" tvg-name="L'Equipe 21" tvg-logo="https://static.epg.best/fr/LEquipe21.fr.png" group-title="Sport",L'Equipe 21
