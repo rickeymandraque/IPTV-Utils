@@ -151,6 +151,8 @@ http://cdn.webtv4.cdnfr.orange.fr/hs/HALO4/hls/gameoneplus1-14552220/hls/index.m
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO5/hls/live/Boomerang_live/index.m3u8
 #EXTINF:-1 tvg-id="Mangas.fr" tvg-name="Mangas" tvg-logo="https://static.epg.best/fr/Mangas.fr.png" group-title="France",Mangas
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/Mangas_live/index.m3u8
+#EXTINF:-1 tvg-id="Mangas.fr" tvg-name="Mangas" tvg-logo="https://static.epg.best/fr/Mangas.fr.png" group-title="France",Mangas alt
+http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/Mangas_live/04.m3u8
 #EXTINF:-1 tvg-id="MCM.fr" tvg-name="MCM" tvg-logo="https://static.epg.best/fr/MCM.fr.png" group-title="France Musique",MCM
 http://cdn.webtv4.cdnfr.orange.fr/hs/HALO1/hls/live/mcm_live/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Clubbing TV" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/3/39/Clubbing_TV.png" group-title="France Musique",Clubbing TV
