@@ -1,4 +1,19 @@
 # IPTV-Utils
+
+## News
+Une grosse Update est en cours:
+Refonte de account checker, fonctionne avec une url de playlist et une liste d'url également.
+Account checker sera capable également de détecter si l'url est un compte Xtream ou non.
+refonte de M3U Grabber, permet de télécharger plusieurs playlists, les parser, les concaténer et les trier.
+Nouveau script qui permetra de construire un fichier (surement json) pour conservé les liens valides et tenir à jour la playlist.
+Ajout d'un systeme de contournement pour les serveurs qui refuse les demande de curl (user-agent).
+Script de construction de playlist en fonction du logiciel utilisé et du réseau (vlc, kodi, mpv, etc...)
+intégration d'un script de vérification des liens
+Ajout de fonction diverses tel la détection de probleme serveur (erreur 404, 403 ou autre) et le contournement.
+
+Le bruteforceur Orange ne fonctionne plus, les serveurs ont changé et le m3u8 n'est plus utilisé, c'est mpd et windevine maintenant (je crois).
+
+
 ## collection de script bash (linux) pour fichiers M3U.
 Comme j'en avais marre de jongler avec les URL pour obtenir les playlists et les mettre à jours, j'ai décidé de créer un script bash.
 
