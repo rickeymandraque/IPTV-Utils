@@ -1,6 +1,11 @@
 # IPTV-Utils
 
 ## News
+### 22/02/2023
+
+Ajout du script Pluto TV qui permet de construire une playlist avec whitelist ou blacklist. W.I.P.
+
+## News plus ancienne mais toujours d'actualité
 Une grosse Update est en cours:
 - Refonte de account checker, fonctionne avec une url de playlist et une liste d'url également.
 - Account checker sera capable également de détecter si l'url est un compte Xtream ou non.
