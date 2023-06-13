@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#######################################
+#       Scrapcat - IPTV Scraping      #
+#######################################
+# Script pour extraire des informations
+# à partir du site IPTVCat (https://iptvcat.com)
+# sur les flux IPTV disponibles.
+#
+# Développeur : Rickey Mandraque
+# GitHub : https://github.com/rickeymandraque/IPTV-Utils
+# Description: Ce script permet de fouiller le site IPTVCat.com, de récupérer les informations des chaînes IPTV disponibles et de les afficher dans le terminal.
+#######################################
+
 # Créer un répertoire temporaire dans "tmpfs"
 tmpdir=$(mktemp -d -p /dev/shm)
 
