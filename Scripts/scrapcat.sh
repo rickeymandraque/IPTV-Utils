@@ -17,38 +17,43 @@ tmpdir=$(mktemp -d -p /dev/shm)
 
 # Fonction pour nettoyer et sortir en cas d'interruption du script
 function cleanup() {
+    local message="Script interrompu par l'utilisateur"
+    local exit_code=1
+
+    if [[ "$1" == "--end-script" ]]; then
+        message="Le site a été complètement scrapé"
+        exit_code=0
+    fi
+
     echo ""
-    echo "Script interrompu par l'utilisateur"
+    echo "$message"
     sleep 1
     echo "Nettoyage en cours"
     rm -r "$tmpdir"
     sleep 1
-    echo "Terminé"
+    echo "Nettoyage terminé"
     sleep 1
-    exit 1
+    exit "$exit_code"
 }
 
 # Gérer l'interruption du script en cas de pression de la touche CTRL+C
 trap cleanup SIGINT
 
-# Fonction pour extraire le contenu entre les balises <span>
-function extract_span_content() {
-    awk -F'</span>' '{print $1}' | awk 'NF'
-}
-function cat_block() {
-    cat "$block_file"
-}
+# Variables de configuration
+countries=("france" "undefined")
+curl_cmd="curl -sL"
+grep_cmd="grep -E"
 
 function get_country_list() {
     local html
-    html=$(curl -sL "https://iptvcat.com")
+    html=$($curl_cmd "https://iptvcat.com")
 
     mapfile -t countries < <(echo "$html" | awk -F'"|</option>' '/<option value="/ && !/all/ {gsub(/ /, "_", $2); print $2}')
 
     echo "${countries[@]}"
 }
 
-# Function to print country list
+# Fonction pour afficher la liste des pays
 function print_country_list() {
     local countries=("$@")
     echo "Les pays suivants vont être analysés :"
@@ -58,8 +63,13 @@ function print_country_list() {
     done
 }
 
-curl_cmd="curl -sL"
-grep_cmd="grep -E"
+# Fonction pour extraire le contenu entre les balises <span>
+function extract_span_content() {
+    awk -F'</span>' '{print $1}' | awk 'NF'
+}
+function cat_block() {
+    cat "$block_file"
+}
 
 # Fonction pour extraire les informations d'un bloc de données
 function extract_info() {
@@ -86,7 +96,7 @@ function extract_info() {
     city=$(cat_block | awk -F'<span class='\''titile_span_small'\''>City: </span><span class='\''minor_content_server'\''>' '{print $2}' | extract_span_content)
     channel_title=$(cat_block | awk -F'title="' '/title="[^"]+">([^<]+)<\/span>/ {match($0, /title="[^"]+">([^<]+)<\/span>/, title); if (title[1] && !/Last checked/) print title[1]}' | sed -E 's/[0-9]{3,},\s\.{3}//')
     stream_link=$(cat_block | grep -oP '<a href="\K[^"]+' | awk 'NR==1')
-    real_link=$($curl_cmd "$stream_link" | $grep_cmd '^https?'| sed 's/[?&]checkedby:iptvcat\.com$//')
+    real_link=$($curl_cmd "$stream_link" | $grep_cmd '^https?' | sed 's/[?&]checkedby:iptvcat\.com$//')
 
     display_info "$channel_title" "$status" "$checked" "$liveliness" "$days" "$formats" "$country" "$region" "$city" "$stream_link" "$real_link"
 }
@@ -98,42 +108,41 @@ function display_info() {
     # Parcourir tous les paramètres
     for param in "$@"; do
         case $param in
-            "$channel_title")
-                echo "Titre de la chaîne : $channel_title"
-                ;;
-            "$checked")
-                echo "Date de dernière vérification : $checked"
-                ;;
-            "$liveliness")
-                echo "Pourcentage de liveliness : $liveliness"
-                ;;
-            "$days")
-                echo "Durée de vie (en jours) : $days"
-                ;;
-            "$status")
-                echo "Statut : $status"
-                ;;
-            "$formats")
-                echo "Formats :"
-                echo "$formats"
-                ;;
-            "$country")
-                echo "Pays de diffusion : $country"
-                ;;
-            "$region")
-                echo "Région de diffusion : $region"
-                ;;
-            "$city")
-                echo "Ville de diffusion : $city"
-                ;;
-            "$stream_link")
-                echo "Lien du flux : $stream_link"
-                ;;
-            "$real_link")
-                echo "Lien réél : $real_link"
-                ;;
-            *)
-                ;;
+        "$channel_title")
+            echo "Titre de la chaîne : $channel_title"
+            ;;
+        "$checked")
+            echo "Date de dernière vérification : $checked"
+            ;;
+        "$liveliness")
+            echo "Pourcentage de liveliness : $liveliness"
+            ;;
+        "$days")
+            echo "Durée de vie (en jours) : $days"
+            ;;
+        "$status")
+            echo "Statut : $status"
+            ;;
+        "$formats")
+            echo "Formats :"
+            echo "$formats"
+            ;;
+        "$country")
+            echo "Pays de diffusion : $country"
+            ;;
+        "$region")
+            echo "Région de diffusion : $region"
+            ;;
+        "$city")
+            echo "Ville de diffusion : $city"
+            ;;
+        "$stream_link")
+            echo "Lien du flux : $stream_link"
+            ;;
+        "$real_link")
+            echo "Lien réél : $real_link"
+            ;;
+        *) ;;
         esac
     done
 
@@ -156,12 +165,12 @@ function scrape_page() {
 
     # Parcourir les blocs et extraire les informations supplémentaires
     while IFS= read -r line; do
-        echo "$line" >> "$tmpdir/block.tmp"
+        echo "$line" >>"$tmpdir/block.tmp"
         if [[ $line == *'data-content="'* ]]; then
             extract_info "$tmpdir/block.tmp"
             rm "$tmpdir/block.tmp"
         fi
-    done <<< "$blocks"
+    done <<<"$blocks"
 }
 
 # Fonction pour remplacer les espaces par des underscore dans les URL des pays
@@ -185,14 +194,14 @@ fi
 
 # Fonction pour vérifier si un pays est sur la liste noire (blacklist)
 function is_blacklisted() {
-    local blacklist=("africa")  # Liste noire (blacklist)
+    local blacklist=("africa") # Liste noire (blacklist)
     local country="$1"
     for blacklisted_country in "${blacklist[@]}"; do
         if [[ "$country" == "$blacklisted_country" ]]; then
-            return 0  # Le pays est sur la liste noire
+            return 0 # Le pays est sur la liste noire
         fi
     done
-    return 1  # Le pays n'est pas sur la liste noire
+    return 1 # Le pays n'est pas sur la liste noire
 }
 
 index=0
@@ -234,5 +243,5 @@ while [[ $index -lt ${#countries[@]} ]]; do
     page_url="$country_url"
 done
 
-# Supprimer le répertoire temporaire
-rm -r "$tmpdir"
+# Nettoyer et supprimer le répertoire temporaire
+cleanup --end-script
