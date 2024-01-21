@@ -1,9 +1,9 @@
 # IPTV-Utils
 
 ## News
-### 22/02/2023
+### 21/01/2024
+- Mise à jour du script PlutoTV, on peut choisir le ou les pays maintenant.
 
-Ajout du script Pluto TV qui permet de construire une playlist avec whitelist ou blacklist. W.I.P.
 
 ## News plus ancienne mais toujours d'actualité
 Une grosse Update est en cours:
@@ -17,6 +17,8 @@ Une grosse Update est en cours:
 - Ajout de fonction diverses tel la détection de probleme serveur (erreur 404, 403 ou autre) et le contournement.
 
 Le bruteforceur Orange ne fonctionne plus, les serveurs ont changé et le m3u8 n'est plus utilisé, c'est mpd et windevine maintenant (je crois).
+
+-Ajout du script Pluto TV qui permet de construire une playlist avec whitelist ou blacklist. W.I.P.
 
 
 ## collection de script bash (linux) pour fichiers M3U.
