@@ -1,11 +1,11 @@
 # IPTV-Utils
 
 ## News
-### 21/01/2024
-- Mise à jour du script PlutoTV, on peut choisir le ou les pays maintenant.
-
+### 03/04/2024
+- Ajout du script IPTV_Search pour trouver les détails d'une chaîne TV à partir de l'API iptvg-org.
 
 ## News plus ancienne mais toujours d'actualité
+- Mise à jour du script PlutoTV, on peut choisir le ou les pays maintenant.
 Une grosse Update est en cours:
 - Refonte de account checker, fonctionne avec une url de playlist et une liste d'url également.
 - Account checker sera capable également de détecter si l'url est un compte Xtream ou non.
@@ -30,7 +30,7 @@ requière wget, recode, gawk, curl, ffmpeg, ffprobe et jq
 ## Get-Playlist
 Script pour obtenir la playlist à partir d'une url type http://host.domain:port/user/password/channel ou http://host.domain:port/live|movie/user/password/channel
 
-### usage:
+### Usage:
 - get-playlist.sh http://host.domain/user/password/channel
 - Fichier de sortie: playlist_host.domain-MM-DD-YYYY.m3u
 
@@ -39,6 +39,46 @@ Script pour obtenir la playlist à partir d'une url type http://host.domain:port
 - juste afficher l'url
 - Consulter les info du compte en local
 - ...
+
+## IPTV Search:
+
+IPTV Search est un outil en ligne de commande permettant de rechercher des chaînes de télévision dans l'API publique d'iptv-org. Il offre plusieurs options pour filtrer les résultats de recherche en fonction du nom de la chaîne, de l'identifiant de la chaîne, du pays, de la présence de contenu pour adultes (NSFW) et de la langue.
+
+### Usage :
+
+```bash
+### Rechercher une chaîne par nom :
+./iptv_search.sh --name "BFM TV"
+```
+
+```bash
+### Rechercher une chaîne par identifiant :
+./iptv_search.sh --id "bfm_tv_fr"
+```
+
+```bash
+### Rechercher les chaînes d'un pays spécifique :
+./iptv_search.sh --country FR
+```
+
+```bash
+### Inclure les chaînes NSFW (contenu pour adultes) :
+./iptv_search.sh --nsfw
+```
+
+```bash
+### Rechercher les chaînes dans une langue spécifique :
+./iptv_search.sh --language fr
+```
+
+Pour obtenir de l'aide sur l'utilisation du script, vous pouvez exécuter la commande suivante :
+
+```bash
+./iptv_search.sh -h
+```
+
+Cette commande affichera les options disponibles ainsi qu'une brève description de chaque option.
+
 
 ## M3U-Optimizer
 
